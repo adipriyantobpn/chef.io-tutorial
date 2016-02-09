@@ -43,6 +43,36 @@ Contents
     review : [install.log](resource-log/01-install-chefdk/install.log)
     literature : [bash options](resource-log/01-install-chefdk/advanced-bash-scripting-guide_options.html)
 
+3. Set up your working directory
+    ```
+    $ mkdir ~/chef-repo
+    $ cd ~/chef-repo
+    ```
+4. Create the MOTD file using Chef locally
+    - Create chef `recipe` file
+        ```
+        $ nano hello.rb
+        ```
+    - Add these lines, then save the file using shortcut combination `^O -> Enter -> ^X`
+        ```
+        file '/tmp/motd' do
+            content 'hello world'
+        end
+        ```
+    - Execute the recipe using local mode `chef-client`
+        ```
+        $ chef-client --local-mode hello.rb
+        ```
+    - Verify if the MOTD file had been successfully created
+        ```
+        $ more /tmp/motd
+        ```
+    - Run again the command for a second time
+        ```
+        $ chef-client --local-mode hello.rb
+        ```
+        review : [execute.log](resource-log/02-create-motd-file/execution.log)
+
 ##Configure a package and service
 ##Make your recipe more manageable
 ##Appendix: Set up your own server
