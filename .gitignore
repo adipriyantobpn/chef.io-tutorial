@@ -51,3 +51,9 @@ crashlytics.properties
 crashlytics-build.properties
 fabric.properties
 
+
+# Created by https://www.gitignore.io/api/vagrant
+
+### Vagrant ###
+*/.vagrant
+
