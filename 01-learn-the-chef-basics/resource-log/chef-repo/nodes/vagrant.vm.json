@@ -160,16 +160,16 @@
           "eth0": {
             "tx": {
               "queuelen": "1000",
-              "bytes": "13694120",
-              "packets": "225179",
+              "bytes": "13701220",
+              "packets": "225258",
               "errors": "0",
               "drop": "0",
               "carrier": "0",
               "collisions": "0"
             },
             "rx": {
-              "bytes": "373603711",
-              "packets": "467948",
+              "bytes": "373611349",
+              "packets": "468057",
               "errors": "0",
               "drop": "0",
               "overrun": "0"
@@ -178,16 +178,16 @@
           "eth1": {
             "tx": {
               "queuelen": "1000",
-              "bytes": "2392761",
-              "packets": "6021",
+              "bytes": "2464169",
+              "packets": "6097",
               "errors": "0",
               "drop": "0",
               "carrier": "0",
               "collisions": "0"
             },
             "rx": {
-              "bytes": "1441759",
-              "packets": "11099",
+              "bytes": "1452879",
+              "packets": "11212",
               "errors": "0",
               "drop": "0",
               "overrun": "0"
@@ -243,10 +243,10 @@
         }
       }
     },
-    "uptime_seconds": 8994,
-    "uptime": "2 hours 29 minutes 54 seconds",
-    "idletime_seconds": 8834,
-    "idletime": "2 hours 27 minutes 14 seconds",
+    "uptime_seconds": 9361,
+    "uptime": "2 hours 36 minutes 01 seconds",
+    "idletime_seconds": 9198,
+    "idletime": "2 hours 33 minutes 18 seconds",
     "kernel": {
       "name": "Linux",
       "release": "3.19.0-25-generic",
@@ -487,8 +487,8 @@
       },
       "vagrant": {
         "kb_size": "385984508",
-        "kb_used": "59407684",
-        "kb_available": "326576824",
+        "kb_used": "59407700",
+        "kb_available": "326576808",
         "percent_used": "16%",
         "mount": "/vagrant",
         "total_inodes": "1000",
@@ -622,23 +622,23 @@
         "free": "785060kB"
       },
       "total": "371948kB",
-      "free": "36908kB",
-      "buffers": "45464kB",
+      "free": "32096kB",
+      "buffers": "45496kB",
       "cached": "69000kB",
-      "active": "161788kB",
-      "inactive": "68076kB",
-      "dirty": "20kB",
+      "active": "166652kB",
+      "inactive": "68036kB",
+      "dirty": "16kB",
       "writeback": "0kB",
-      "anon_pages": "115380kB",
-      "mapped": "11828kB",
-      "slab": "91804kB",
+      "anon_pages": "120168kB",
+      "mapped": "11820kB",
+      "slab": "91800kB",
       "slab_reclaimable": "81248kB",
-      "slab_unreclaim": "10556kB",
-      "page_tables": "3660kB",
+      "slab_unreclaim": "10552kB",
+      "page_tables": "3652kB",
       "nfs_unstable": "0kB",
       "bounce": "0kB",
       "commit_limit": "972400kB",
-      "committed_as": "234692kB",
+      "committed_as": "234668kB",
       "vmalloc_total": "34359738367kB",
       "vmalloc_used": "17372kB",
       "vmalloc_chunk": "34359717368kB"
@@ -745,8 +745,8 @@
         },
         "vagrant": {
           "kb_size": "385984508",
-          "kb_used": "59407684",
-          "kb_available": "326576824",
+          "kb_used": "59407700",
+          "kb_available": "326576808",
           "percent_used": "16%",
           "total_inodes": "1000",
           "inodes_used": "0",
@@ -999,8 +999,8 @@
         },
         "/vagrant": {
           "kb_size": "385984508",
-          "kb_used": "59407684",
-          "kb_available": "326576824",
+          "kb_used": "59407700",
+          "kb_available": "326576808",
           "percent_used": "16%",
           "total_inodes": "1000",
           "inodes_used": "0",
@@ -1262,8 +1262,8 @@
         "vagrant,/vagrant": {
           "device": "vagrant",
           "kb_size": "385984508",
-          "kb_used": "59407684",
-          "kb_available": "326576824",
+          "kb_used": "59407700",
+          "kb_available": "326576808",
           "percent_used": "16%",
           "mount": "/vagrant",
           "total_inodes": "1000",
@@ -2029,7 +2029,7 @@
     "fqdn": "vagrant.vm",
     "domain": "vm",
     "cloud_v2": null,
-    "ohai_time": 1455054577.9407353,
+    "ohai_time": 1455054945.026905,
     "recipes": [
 
     ],

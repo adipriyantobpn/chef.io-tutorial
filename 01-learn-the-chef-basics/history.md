@@ -72,6 +72,26 @@ Contents
         $ chef-client --local-mode hello.rb
         ```
         review : [execute.log](resource-log/02-create-motd-file/execution.log)
+5. Modify the MOTD file's contents using Chef
+    - Open the chef `recipe` file
+        ```
+        $ nano hello.rb
+        ```
+    - Modify the file, then save the file using shortcut combination `^O -> Enter -> ^X`
+        ```
+        file '/tmp/motd' do
+            content 'hello chef'
+        end
+        ```
+    - Execute the recipe
+        ```
+        $ chef-client --local-mode hello.rb
+        ```
+    - Verify if the MOTD file had been successfully created
+        ```
+        $ more /tmp/motd
+        ```
+        review : [execute.log](resource-log/03-modify-motd-file/execution.log)
 
 ##Configure a package and service
 ##Make your recipe more manageable
