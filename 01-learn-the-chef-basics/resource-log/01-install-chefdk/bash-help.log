@@ -1,0 +1,162 @@
+vagrant@vagrant:~$ bash --help
+GNU bash, version 4.3.11(1)-release-(x86_64-pc-linux-gnu)
+Usage:  bash [GNU long option] [option] ...
+        bash [GNU long option] [option] script-file ...
+GNU long options:
+        --debug
+        --debugger
+        --dump-po-strings
+        --dump-strings
+        --help
+        --init-file
+        --login
+        --noediting
+        --noprofile
+        --norc
+        --posix
+        --rcfile
+        --restricted
+        --verbose
+        --version
+Shell options:
+        -ilrsD or -c command or -O shopt_option         (invocation only)
+        -abefhkmnptuvxBCHP or -o option
+Type `bash -c "help set"' for more information about shell options.
+Type `bash -c help' for more information about shell builtin commands.
+Use the `bashbug' command to report bugs.
+
+
+
+vagrant@vagrant:~$ bash -c help
+GNU bash, version 4.3.11(1)-release (x86_64-pc-linux-gnu)
+These shell commands are defined internally.  Type `help' to see this list.
+Type `help name' to find out more about the function `name'.
+Use `info bash' to find out more about the shell in general.
+Use `man -k' or `info' to find out more about commands not in this list.
+
+A star (*) next to a name means that the command is disabled.
+
+ job_spec [&]                            history [-c] [-d offset] [n] or hist>
+ (( expression ))                        if COMMANDS; then COMMANDS; [ elif C>
+ . filename [arguments]                  jobs [-lnprs] [jobspec ...] or jobs >
+ :                                       kill [-s sigspec | -n signum | -sigs>
+ [ arg... ]                              let arg [arg ...]
+ [[ expression ]]                        local [option] name[=value] ...
+ alias [-p] [name[=value] ... ]          logout [n]
+ bg [job_spec ...]                       mapfile [-n count] [-O origin] [-s c>
+ bind [-lpsvPSVX] [-m keymap] [-f file>  popd [-n] [+N | -N]
+ break [n]                               printf [-v var] format [arguments]
+ builtin [shell-builtin [arg ...]]       pushd [-n] [+N | -N | dir]
+ caller [expr]                           pwd [-LP]
+ case WORD in [PATTERN [| PATTERN]...)>  read [-ers] [-a array] [-d delim] [->
+ cd [-L|[-P [-e]] [-@]] [dir]            readarray [-n count] [-O origin] [-s>
+ command [-pVv] command [arg ...]        readonly [-aAf] [name[=value] ...] o>
+ compgen [-abcdefgjksuv] [-o option]  >  return [n]
+ complete [-abcdefgjksuv] [-pr] [-DE] >  select NAME [in WORDS ... ;] do COMM>
+ compopt [-o|+o option] [-DE] [name ..>  set [-abefhkmnptuvxBCHP] [-o option->
+ continue [n]                            shift [n]
+ coproc [NAME] command [redirections]    shopt [-pqsu] [-o] [optname ...]
+ declare [-aAfFgilnrtux] [-p] [name[=v>  source filename [arguments]
+ dirs [-clpv] [+N] [-N]                  suspend [-f]
+ disown [-h] [-ar] [jobspec ...]         test [expr]
+ echo [-neE] [arg ...]                   time [-p] pipeline
+ enable [-a] [-dnps] [-f filename] [na>  times
+ eval [arg ...]                          trap [-lp] [[arg] signal_spec ...]
+ exec [-cl] [-a name] [command [argume>  true
+ exit [n]                                type [-afptP] name [name ...]
+ export [-fn] [name[=value] ...] or ex>  typeset [-aAfFgilrtux] [-p] name[=va>
+ false                                   ulimit [-SHabcdefilmnpqrstuvxT] [lim>
+ fc [-e ename] [-lnr] [first] [last] o>  umask [-p] [-S] [mode]
+ fg [job_spec]                           unalias [-a] name [name ...]
+ for NAME [in WORDS ... ] ; do COMMAND>  unset [-f] [-v] [-n] [name ...]
+ for (( exp1; exp2; exp3 )); do COMMAN>  until COMMANDS; do COMMANDS; done
+ function name { COMMANDS ; } or name >  variables - Names and meanings of so>
+ getopts optstring name [arg]            wait [-n] [id ...]
+ hash [-lr] [-p pathname] [-dt] [name >  while COMMANDS; do COMMANDS; done
+ help [-dms] [pattern ...]               { COMMANDS ; }
+
+
+
+
+vagrant@vagrant:~$ bash -c "help set"
+set: set [-abefhkmnptuvxBCHP] [-o option-name] [--] [arg ...]
+    Set or unset values of shell options and positional parameters.
+
+    Change the value of shell attributes and positional parameters, or
+    display the names and values of shell variables.
+
+    Options:
+      -a  Mark variables which are modified or created for export.
+      -b  Notify of job termination immediately.
+      -e  Exit immediately if a command exits with a non-zero status.
+      -f  Disable file name generation (globbing).
+      -h  Remember the location of commands as they are looked up.
+      -k  All assignment arguments are placed in the environment for a
+          command, not just those that precede the command name.
+      -m  Job control is enabled.
+      -n  Read commands but do not execute them.
+      -o option-name
+          Set the variable corresponding to option-name:
+              allexport    same as -a
+              braceexpand  same as -B
+              emacs        use an emacs-style line editing interface
+              errexit      same as -e
+              errtrace     same as -E
+              functrace    same as -T
+              hashall      same as -h
+              histexpand   same as -H
+              history      enable command history
+              ignoreeof    the shell will not exit upon reading EOF
+              interactive-comments
+                           allow comments to appear in interactive commands
+              keyword      same as -k
+              monitor      same as -m
+              noclobber    same as -C
+              noexec       same as -n
+              noglob       same as -f
+              nolog        currently accepted but ignored
+              notify       same as -b
+              nounset      same as -u
+              onecmd       same as -t
+              physical     same as -P
+              pipefail     the return value of a pipeline is the status of
+                           the last command to exit with a non-zero status,
+                           or zero if no command exited with a non-zero status
+              posix        change the behavior of bash where the default
+                           operation differs from the Posix standard to
+                           match the standard
+              privileged   same as -p
+              verbose      same as -v
+              vi           use a vi-style line editing interface
+              xtrace       same as -x
+      -p  Turned on whenever the real and effective user ids do not match.
+          Disables processing of the $ENV file and importing of shell
+          functions.  Turning this option off causes the effective uid and
+          gid to be set to the real uid and gid.
+      -t  Exit after reading and executing one command.
+      -u  Treat unset variables as an error when substituting.
+      -v  Print shell input lines as they are read.
+      -x  Print commands and their arguments as they are executed.
+      -B  the shell will perform brace expansion
+      -C  If set, disallow existing regular files to be overwritten
+          by redirection of output.
+      -E  If set, the ERR trap is inherited by shell functions.
+      -H  Enable ! style history substitution.  This flag is on
+          by default when the shell is interactive.
+      -P  If set, do not resolve symbolic links when executing commands
+          such as cd which change the current directory.
+      -T  If set, the DEBUG trap is inherited by shell functions.
+      --  Assign any remaining arguments to the positional parameters.
+          If there are no remaining arguments, the positional parameters
+          are unset.
+      -   Assign any remaining arguments to the positional parameters.
+          The -x and -v options are turned off.
+
+    Using + rather than - causes these flags to be turned off.  The
+    flags can also be used upon invocation of the shell.  The current
+    set of flags may be found in $-.  The remaining n ARGs are positional
+    parameters and are assigned, in order, to $1, $2, .. $n.  If no
+    ARGs are given, all shell variables are printed.
+
+    Exit Status:
+    Returns success unless an invalid option is given.

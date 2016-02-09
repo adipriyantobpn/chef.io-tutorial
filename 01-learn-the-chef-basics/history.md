@@ -24,6 +24,25 @@ Contents
 
 
 ##Configure a resource
+
+1. Run & connect to the server
+    ```
+    $ vagrant up
+    $ vagrant ssh
+    ```
+2. Install the Chef DK
+    ```
+    $ sudo apt-get install curl --yes > /dev/null
+    $ curl https://omnitruck.chef.io/install.sh | sudo bash -s -- -c stable -P chefdk
+    $ # --  command above is just as same as these commands below
+    $ # curl https://omnitruck.chef.io/install.sh
+    $ # sudo chmod +x install.sh
+    $ # sudo ./install.sh -c stable -P chefdk -v 0.10
+    ```
+    download : [install.sh](resource-log/01-install-chefdk/install.sh)
+    review : [install.log](resource-log/01-install-chefdk/install.log)
+    literature : [bash options](resource-log/01-install-chefdk/advanced-bash-scripting-guide_options.html)
+
 ##Configure a package and service
 ##Make your recipe more manageable
 ##Appendix: Set up your own server
