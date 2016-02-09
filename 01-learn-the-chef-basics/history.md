@@ -105,6 +105,21 @@ Contents
         ```
         $ more /tmp/motd
         ```
+7. Delete the MOTD file using Chef
+    - Create `goodbye.rb`, then save it
+        ```
+        file '/tmp/motd' do
+            action :delete
+        end
+        ```
+    - Run the chef recipe
+        ```
+        $ chef-client --local-mode goodbye.rb
+        ```
+    - Verify if the MOTD file had been deleted
+        ```
+        $ more /tmp/motd
+        ```
 
 ##Configure a package and service
 ##Make your recipe more manageable
