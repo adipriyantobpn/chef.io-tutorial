@@ -1,0 +1,45 @@
+vagrant@vagrant:~/chef-repo$ # --------------------------------------------------------------------
+vagrant@vagrant:~/chef-repo$ # -- Simulate that MOTD file had beed changed by some person
+vagrant@vagrant:~/chef-repo$ # --------------------------------------------------------------------
+vagrant@vagrant:~/chef-repo$ echo 'hello robots' > /tmp/motd
+vagrant@vagrant:~/chef-repo$
+vagrant@vagrant:~/chef-repo$
+vagrant@vagrant:~/chef-repo$ # --------------------------------------------------------------------
+vagrant@vagrant:~/chef-repo$ # -- Verify if the MOTD file had been changed
+vagrant@vagrant:~/chef-repo$ # --------------------------------------------------------------------
+vagrant@vagrant:~/chef-repo$ more /tmp/motd
+hello robots
+vagrant@vagrant:~/chef-repo$
+vagrant@vagrant:~/chef-repo$
+vagrant@vagrant:~/chef-repo$ # --------------------------------------------------------------------
+vagrant@vagrant:~/chef-repo$ # -- Chef recipe will restore it again
+vagrant@vagrant:~/chef-repo$ # --------------------------------------------------------------------
+vagrant@vagrant:~/chef-repo$ chef-client --local-mode hello.rb
+[2016-02-09T22:07:57+00:00] WARN: No config file found or specified on command line, using command line options.
+[2016-02-09T22:07:57+00:00] WARN: No cookbooks directory found at or above current directory.  Assuming /home/vagrant/chef-repo.
+Starting Chef Client, version 12.5.1
+resolving cookbooks for run list: []
+Synchronizing Cookbooks:
+Compiling Cookbooks...
+[2016-02-09T22:08:03+00:00] WARN: Node vagrant.vm has an empty run list.
+Converging 1 resources
+Recipe: @recipe_files::/home/vagrant/chef-repo/hello.rb
+  * file[/tmp/motd] action create
+    - update content in file /tmp/motd from 548078 to c38c60
+    --- /tmp/motd       2016-02-09 22:07:48.655818031 +0000
+    +++ /tmp/.motd20160209-3065-1ndzspr 2016-02-09 22:08:03.207818031 +0000
+    @@ -1,2 +1,2 @@
+    -hello robots
+    +hello chef
+
+Running handlers:
+Running handlers complete
+Chef Client finished, 1/1 resources updated in 05 seconds
+vagrant@vagrant:~/chef-repo$
+vagrant@vagrant:~/chef-repo$
+vagrant@vagrant:~/chef-repo$ # --------------------------------------------------------------------
+vagrant@vagrant:~/chef-repo$ # -- Verify if the MOTD file had been successfully restored
+vagrant@vagrant:~/chef-repo$ # --------------------------------------------------------------------
+vagrant@vagrant:~/chef-repo$ more /tmp/motd
+hello chef
+vagrant@vagrant:~/chef-repo$

@@ -92,6 +92,19 @@ Contents
         $ more /tmp/motd
         ```
         review : [execute.log](resource-log/03-modify-motd-file/execution.log)
+6. Ensure the MOTD file's contents are not changed by anyone else
+    - Simulate that MOTD file had beed changed by some person
+        ```
+        $ echo 'hello robots' > /tmp/motd
+        ```
+    - Run the chef recipe
+        ```
+        $ chef-client --local-mode hello.rb
+        ```
+    - Verify if the MOTD file had been successfully created
+        ```
+        $ more /tmp/motd
+        ```
 
 ##Configure a package and service
 ##Make your recipe more manageable
