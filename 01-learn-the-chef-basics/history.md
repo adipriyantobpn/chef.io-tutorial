@@ -150,6 +150,32 @@ Contents
         ```
         $ sudo chef-client --local-mode webserver.rb
         ```
+3. Add a home page
+    - Modify the `webserver.rb` file to be like this
+        ```
+        package 'apache2'
+        #
+        service 'apache2' do
+            supports :status => true
+            action [:enable, :start]
+        end
+        #
+        file '/var/www/html/index.html' do
+          content '<html>
+          <body>
+            <h1>hello world</h1>
+          </body>
+        </html>'
+        end
+        ```
+    - Execute the recipe
+        ```
+        $ sudo chef-client --local-mode webserver.rb
+        ```
+4. Confirm your web site is running
+    ```
+    $ curl localhost
+    ```
 
 ##Make your recipe more manageable
 ##Appendix: Set up your own server
