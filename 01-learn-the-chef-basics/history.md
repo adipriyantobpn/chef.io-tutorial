@@ -71,7 +71,7 @@ Contents
         ```
         $ chef-client --local-mode hello.rb
         ```
-        review : [execute.log](resource-log/02-create-motd-file/execution.log)
+        review : [execute.log][motd-create]
 5. Modify the MOTD file's contents using Chef
     - Open the chef `recipe` file
         ```
@@ -91,7 +91,7 @@ Contents
         ```
         $ more /tmp/motd
         ```
-        review : [execute.log](resource-log/03-modify-motd-file/execution.log)
+        review : [execute.log][motd-modify]
 6. Ensure the MOTD file's contents are not changed by anyone else
     - Simulate that MOTD file had beed changed by some person
         ```
@@ -105,6 +105,7 @@ Contents
         ```
         $ more /tmp/motd
         ```
+        review : [execute.log][motd-accident-modif]
 7. Delete the MOTD file using Chef
     - Create `goodbye.rb`, then save it
         ```
@@ -120,6 +121,7 @@ Contents
         ```
         $ more /tmp/motd
         ```
+        review : [execute.log][motd-delete]
 
 ##Configure a package and service
 
@@ -233,3 +235,7 @@ Contents
 [install-chefdk]: resource-log/01-configure-a-resource/01-install-chefdk/install.sh
 [install-chefdk-log]: resource-log/01-configure-a-resource/01-install-chefdk/install.log
 [bash-options]: resource-log/01-configure-a-resource/01-install-chefdk/advanced-bash-scripting-guide_options.html
+[motd-create]: resource-log/01-configure-a-resource/02-create-motd-file/execution.log
+[motd-modify]: resource-log/01-configure-a-resource/03-modify-motd-file/execution.log
+[motd-accident-modif]: resource-log/01-configure-a-resource/04-simulate-accidental-file-modification/execution.log
+[motd-delete]: resource-log/01-configure-a-resource/05-delete-motd-file/execution.log
