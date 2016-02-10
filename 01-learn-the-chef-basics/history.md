@@ -180,6 +180,20 @@ Contents
     ```
 
 ##Make your recipe more manageable
+
+1. Create a `cookbook`
+    - Create cookbook directory
+        ```
+        $ mkdir ~/chef-repo/cookbooks
+        $ cd ~/chef-repo/cookbooks
+        ```
+    - Generate cookbook named `learn_chef_apache2`
+        ```
+        $ chef generate cookbook learn_chef_apache2
+        ```
+    - Review cookbook directory structure
+        ![Chef cookbook directory structure][img-chef-cookbook-dir-structure]
+
 ##Appendix: Set up your own server
 
 1. Virtual development environment
@@ -242,3 +256,5 @@ Contents
 [motd-modify]:          resource-log/01-configure-a-resource/03-modify-motd-file/execution.log
 [motd-accident-modif]:  resource-log/01-configure-a-resource/04-simulate-accidental-file-modification/execution.log
 [motd-delete]:          resource-log/01-configure-a-resource/05-delete-motd-file/execution.log
+
+[img-chef-cookbook-dir-structure]: resource-log/03-make-your-recipe-more-manageable/chef-cookbook-directory-structure.png

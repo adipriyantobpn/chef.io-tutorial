@@ -1,0 +1,93 @@
+vagrant@vagrant:~/chef-repo$ # --------------------------------------------------------------------
+vagrant@vagrant:~/chef-repo$ # -- Create cookbook directory
+vagrant@vagrant:~/chef-repo$ # --------------------------------------------------------------------
+vagrant@vagrant:~/chef-repo$ mkdir ~/chef-repo/cookbooks
+vagrant@vagrant:~/chef-repo$ cd ~/chef-repo/cookbooks
+vagrant@vagrant:~/chef-repo/cookbooks$
+vagrant@vagrant:~/chef-repo/cookbooks$
+vagrant@vagrant:~/chef-repo/cookbooks$ # --------------------------------------------------------------------
+vagrant@vagrant:~/chef-repo/cookbooks$ # -- Generate cookbook named `learn_chef_apache2`
+vagrant@vagrant:~/chef-repo/cookbooks$ # --------------------------------------------------------------------
+vagrant@vagrant:~/chef-repo/cookbooks$ chef generate cookbook learn_chef_apache2
+Compiling Cookbooks...
+Recipe: code_generator::cookbook
+  * directory[/home/vagrant/chef-repo/cookbooks/learn_chef_apache2] action create
+    - create new directory /home/vagrant/chef-repo/cookbooks/learn_chef_apache2
+  * template[/home/vagrant/chef-repo/cookbooks/learn_chef_apache2/metadata.rb] action create_if_missing
+    - create new file /home/vagrant/chef-repo/cookbooks/learn_chef_apache2/metadata.rb
+    - update content in file /home/vagrant/chef-repo/cookbooks/learn_chef_apache2/metadata.rb from none to 71d760
+    (diff output suppressed by config)
+  * template[/home/vagrant/chef-repo/cookbooks/learn_chef_apache2/README.md] action create_if_missing
+    - create new file /home/vagrant/chef-repo/cookbooks/learn_chef_apache2/README.md
+    - update content in file /home/vagrant/chef-repo/cookbooks/learn_chef_apache2/README.md from none to 49235c
+    (diff output suppressed by config)
+  * cookbook_file[/home/vagrant/chef-repo/cookbooks/learn_chef_apache2/chefignore] action create
+    - create new file /home/vagrant/chef-repo/cookbooks/learn_chef_apache2/chefignore
+    - update content in file /home/vagrant/chef-repo/cookbooks/learn_chef_apache2/chefignore from none to 51b09a
+    (diff output suppressed by config)
+  * cookbook_file[/home/vagrant/chef-repo/cookbooks/learn_chef_apache2/Berksfile] action create_if_missing
+    - create new file /home/vagrant/chef-repo/cookbooks/learn_chef_apache2/Berksfile
+    - update content in file /home/vagrant/chef-repo/cookbooks/learn_chef_apache2/Berksfile from none to 5ec92e
+    (diff output suppressed by config)
+  * template[/home/vagrant/chef-repo/cookbooks/learn_chef_apache2/.kitchen.yml] action create_if_missing
+    - create new file /home/vagrant/chef-repo/cookbooks/learn_chef_apache2/.kitchen.yml
+    - update content in file /home/vagrant/chef-repo/cookbooks/learn_chef_apache2/.kitchen.yml from none to f8d1ff
+    (diff output suppressed by config)
+  * directory[/home/vagrant/chef-repo/cookbooks/learn_chef_apache2/test/integration/default/serverspec] action create
+    - create new directory /home/vagrant/chef-repo/cookbooks/learn_chef_apache2/test/integration/default/serverspec
+  * directory[/home/vagrant/chef-repo/cookbooks/learn_chef_apache2/test/integration/helpers/serverspec] action create
+    - create new directory /home/vagrant/chef-repo/cookbooks/learn_chef_apache2/test/integration/helpers/serverspec
+  * cookbook_file[/home/vagrant/chef-repo/cookbooks/learn_chef_apache2/test/integration/helpers/serverspec/spec_helper.rb] action create_if_missing
+    - create new file /home/vagrant/chef-repo/cookbooks/learn_chef_apache2/test/integration/helpers/serverspec/spec_helper.rb
+    - update content in file /home/vagrant/chef-repo/cookbooks/learn_chef_apache2/test/integration/helpers/serverspec/spec_helper.rb from none to a226b8
+    (diff output suppressed by config)
+  * template[/home/vagrant/chef-repo/cookbooks/learn_chef_apache2/test/integration/default/serverspec/default_spec.rb] action create_if_missing
+    - create new file /home/vagrant/chef-repo/cookbooks/learn_chef_apache2/test/integration/default/serverspec/default_spec.rb
+    - update content in file /home/vagrant/chef-repo/cookbooks/learn_chef_apache2/test/integration/default/serverspec/default_spec.rb from none to 0dc627
+    (diff output suppressed by config)
+  * directory[/home/vagrant/chef-repo/cookbooks/learn_chef_apache2/spec/unit/recipes] action create
+    - create new directory /home/vagrant/chef-repo/cookbooks/learn_chef_apache2/spec/unit/recipes
+  * cookbook_file[/home/vagrant/chef-repo/cookbooks/learn_chef_apache2/spec/spec_helper.rb] action create_if_missing
+    - create new file /home/vagrant/chef-repo/cookbooks/learn_chef_apache2/spec/spec_helper.rb
+    - update content in file /home/vagrant/chef-repo/cookbooks/learn_chef_apache2/spec/spec_helper.rb from none to 945e09
+    (diff output suppressed by config)
+  * template[/home/vagrant/chef-repo/cookbooks/learn_chef_apache2/spec/unit/recipes/default_spec.rb] action create_if_missing
+    - create new file /home/vagrant/chef-repo/cookbooks/learn_chef_apache2/spec/unit/recipes/default_spec.rb
+    - update content in file /home/vagrant/chef-repo/cookbooks/learn_chef_apache2/spec/unit/recipes/default_spec.rb from none to 1a66b0
+    (diff output suppressed by config)
+  * directory[/home/vagrant/chef-repo/cookbooks/learn_chef_apache2/recipes] action create
+    - create new directory /home/vagrant/chef-repo/cookbooks/learn_chef_apache2/recipes
+  * template[/home/vagrant/chef-repo/cookbooks/learn_chef_apache2/recipes/default.rb] action create_if_missing
+    - create new file /home/vagrant/chef-repo/cookbooks/learn_chef_apache2/recipes/default.rb
+    - update content in file /home/vagrant/chef-repo/cookbooks/learn_chef_apache2/recipes/default.rb from none to 9fb7d1
+    (diff output suppressed by config)
+vagrant@vagrant:~/chef-repo/cookbooks$
+vagrant@vagrant:~/chef-repo/cookbooks$
+vagrant@vagrant:~/chef-repo/cookbooks$ # --------------------------------------------------------------------
+vagrant@vagrant:~/chef-repo/cookbooks$ # -- Review cookbook directory structure
+vagrant@vagrant:~/chef-repo/cookbooks$ # --------------------------------------------------------------------
+vagrant@vagrant:~/chef-repo/cookbooks$ tree
+.
+└── learn_chef_apache2
+    ├── Berksfile
+    ├── chefignore
+    ├── metadata.rb
+    ├── README.md
+    ├── recipes
+    │   └── default.rb
+    ├── spec
+    │   ├── spec_helper.rb
+    │   └── unit
+    │       └── recipes
+    │           └── default_spec.rb
+    └── test
+        └── integration
+            ├── default
+            │   └── serverspec
+            │       └── default_spec.rb
+            └── helpers
+                └── serverspec
+                    └── spec_helper.rb
+
+11 directories, 9 files
+vagrant@vagrant:~/chef-repo/cookbooks$
