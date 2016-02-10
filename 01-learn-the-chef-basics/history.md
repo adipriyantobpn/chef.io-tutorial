@@ -193,6 +193,21 @@ Contents
         ```
     - Review cookbook directory structure
         ![Chef cookbook directory structure][img-chef-cookbook-dir-structure]
+2. Create a template
+    - Generate HTML template for `learn_chef_apache2` cookbook
+        ```
+        $ chef generate template learn_chef_apache2 index.html
+        ```
+    - Review generated template file location in cookbook directory
+        ![Chef cookbook directory structure with HTML template][img-chef-cookbook-template-dir-structure]
+    - Modify HTML template file
+        ```html
+        <html>
+          <body>
+            <h1>hello world</h1>
+          </body>
+        </html>
+        ```
 
 ##Appendix: Set up your own server
 
@@ -257,4 +272,5 @@ Contents
 [motd-accident-modif]:  resource-log/01-configure-a-resource/04-simulate-accidental-file-modification/execution.log
 [motd-delete]:          resource-log/01-configure-a-resource/05-delete-motd-file/execution.log
 
-[img-chef-cookbook-dir-structure]: resource-log/03-make-your-recipe-more-manageable/chef-cookbook-directory-structure.png
+[img-chef-cookbook-dir-structure]:          resource-log/03-make-your-recipe-more-manageable/chef-cookbook-directory-structure.png
+[img-chef-cookbook-template-dir-structure]: resource-log/03-make-your-recipe-more-manageable/chef-cookbook-template-dir-structure.png

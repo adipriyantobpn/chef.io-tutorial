@@ -91,3 +91,54 @@ vagrant@vagrant:~/chef-repo/cookbooks$ tree
 
 11 directories, 9 files
 vagrant@vagrant:~/chef-repo/cookbooks$
+vagrant@vagrant:~/chef-repo/cookbooks$
+vagrant@vagrant:~/chef-repo/cookbooks$ # --------------------------------------------------------------------
+vagrant@vagrant:~/chef-repo/cookbooks$ # -- Generate HTML template for `learn_chef_apache2` cookbook
+vagrant@vagrant:~/chef-repo/cookbooks$ # --------------------------------------------------------------------
+vagrant@vagrant:~/chef-repo/cookbooks$ chef generate template learn_chef_apache2 index.html
+Compiling Cookbooks...
+Recipe: code_generator::template
+  * directory[./learn_chef_apache2/templates/default] action create
+    - create new directory ./learn_chef_apache2/templates/default
+  * template[./learn_chef_apache2/templates/default/index.html.erb] action create
+    - create new file ./learn_chef_apache2/templates/default/index.html.erb
+    - update content in file ./learn_chef_apache2/templates/default/index.html.erb from none to e3b0c4
+    (diff output suppressed by config)
+vagrant@vagrant:~/chef-repo/cookbooks$
+vagrant@vagrant:~/chef-repo/cookbooks$
+vagrant@vagrant:~/chef-repo/cookbooks$ # --------------------------------------------------------------------
+vagrant@vagrant:~/chef-repo/cookbooks$ # -- Review generated template file location in cookbook directory
+vagrant@vagrant:~/chef-repo/cookbooks$ # --------------------------------------------------------------------
+vagrant@vagrant:~/chef-repo/cookbooks$ tree
+.
+└── learn_chef_apache2
+    ├── Berksfile
+    ├── chefignore
+    ├── metadata.rb
+    ├── README.md
+    ├── recipes
+    │   └── default.rb
+    ├── spec
+    │   ├── spec_helper.rb
+    │   └── unit
+    │       └── recipes
+    │           └── default_spec.rb
+    ├── templates
+    │   └── default
+    │       └── index.html.erb
+    └── test
+        └── integration
+            ├── default
+            │   └── serverspec
+            │       └── default_spec.rb
+            └── helpers
+                └── serverspec
+                    └── spec_helper.rb
+
+13 directories, 10 files
+vagrant@vagrant:~/chef-repo/cookbooks$
+vagrant@vagrant:~/chef-repo/cookbooks$
+vagrant@vagrant:~/chef-repo/cookbooks$ # --------------------------------------------------------------------
+vagrant@vagrant:~/chef-repo/cookbooks$ # -- Modify HTML template file
+vagrant@vagrant:~/chef-repo/cookbooks$ # --------------------------------------------------------------------
+vagrant@vagrant:~/chef-repo/cookbooks$ nano learn_chef_apache2/templates/default/index.html.erb
