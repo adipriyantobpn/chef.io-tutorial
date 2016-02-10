@@ -136,6 +136,20 @@ Contents
         ```
         $ sudo chef-client --local-mode webserver.rb
         ```
+2. Start and enable the Apache service
+    - Modify the `webserver.rb` file to be like this
+        ```
+        package 'apache2'
+        #
+        service 'apache2' do
+            supports :status => true
+            action [:enable, :start]
+        end
+        ```
+    - Execute the recipe
+        ```
+        $ sudo chef-client --local-mode webserver.rb
+        ```
 
 ##Make your recipe more manageable
 ##Appendix: Set up your own server
