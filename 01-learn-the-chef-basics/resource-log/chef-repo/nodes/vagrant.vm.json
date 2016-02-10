@@ -142,15 +142,15 @@
         "interfaces": {
           "lo": {
             "rx": {
-              "bytes": "0",
-              "packets": "0",
+              "bytes": "1184",
+              "packets": "16",
               "errors": "0",
               "drop": "0",
               "overrun": "0"
             },
             "tx": {
-              "bytes": "0",
-              "packets": "0",
+              "bytes": "1184",
+              "packets": "16",
               "errors": "0",
               "drop": "0",
               "carrier": "0",
@@ -160,16 +160,16 @@
           "eth0": {
             "tx": {
               "queuelen": "1000",
-              "bytes": "13727404",
-              "packets": "225545",
+              "bytes": "34532",
+              "packets": "249",
               "errors": "0",
               "drop": "0",
               "carrier": "0",
               "collisions": "0"
             },
             "rx": {
-              "bytes": "373640941",
-              "packets": "468473",
+              "bytes": "38690",
+              "packets": "362",
               "errors": "0",
               "drop": "0",
               "overrun": "0"
@@ -178,16 +178,16 @@
           "eth1": {
             "tx": {
               "queuelen": "1000",
-              "bytes": "2608139",
-              "packets": "6322",
+              "bytes": "45051",
+              "packets": "258",
               "errors": "0",
               "drop": "0",
               "carrier": "0",
               "collisions": "0"
             },
             "rx": {
-              "bytes": "1492537",
-              "packets": "11601",
+              "bytes": "46583",
+              "packets": "412",
               "errors": "0",
               "drop": "0",
               "overrun": "0"
@@ -243,10 +243,10 @@
         }
       }
     },
-    "uptime_seconds": 10993,
-    "uptime": "3 hours 03 minutes 13 seconds",
-    "idletime_seconds": 10820,
-    "idletime": "3 hours 00 minutes 20 seconds",
+    "uptime_seconds": 1484,
+    "uptime": "24 minutes 44 seconds",
+    "idletime_seconds": 1455,
+    "idletime": "24 minutes 15 seconds",
     "kernel": {
       "name": "Linux",
       "release": "3.19.0-25-generic",
@@ -260,6 +260,10 @@
         },
         "dm_crypt": {
           "size": "24576",
+          "refcount": "0"
+        },
+        "ppdev": {
+          "size": "20480",
           "refcount": "0"
         },
         "nfsd": {
@@ -294,10 +298,6 @@
           "size": "65536",
           "refcount": "1"
         },
-        "ppdev": {
-          "size": "20480",
-          "refcount": "0"
-        },
         "iosf_mbi": {
           "size": "16384",
           "refcount": "0"
@@ -326,13 +326,13 @@
           "size": "16384",
           "refcount": "0"
         },
-        "i2c_piix4": {
-          "size": "24576",
-          "refcount": "0"
-        },
         "vboxguest": {
           "size": "278528",
           "refcount": "2"
+        },
+        "i2c_piix4": {
+          "size": "24576",
+          "refcount": "0"
         },
         "drm": {
           "size": "344064",
@@ -358,24 +358,24 @@
           "size": "16384",
           "refcount": "0"
         },
-        "psmouse": {
-          "size": "114688",
-          "refcount": "0"
-        },
         "ahci": {
           "size": "36864",
           "refcount": "2"
+        },
+        "psmouse": {
+          "size": "114688",
+          "refcount": "0"
         },
         "libahci": {
           "size": "32768",
           "refcount": "1"
         },
-        "video": {
-          "size": "20480",
-          "refcount": "0"
-        },
         "e1000": {
           "size": "135168",
+          "refcount": "0"
+        },
+        "video": {
+          "size": "20480",
           "refcount": "0"
         },
         "pata_acpi": {
@@ -422,13 +422,13 @@
       },
       "tmpfs": {
         "kb_size": "37196",
-        "kb_used": "408",
-        "kb_available": "36788",
+        "kb_used": "404",
+        "kb_available": "36792",
         "percent_used": "2%",
         "mount": "/run",
         "total_inodes": "46493",
-        "inodes_used": "364",
-        "inodes_available": "46129",
+        "inodes_used": "362",
+        "inodes_available": "46131",
         "inodes_percent_used": "1%",
         "fs_type": "tmpfs",
         "mount_options": [
@@ -441,19 +441,20 @@
       },
       "/dev/mapper/vagrant--vg-root": {
         "kb_size": "40129116",
-        "kb_used": "1912152",
-        "kb_available": "36155448",
-        "percent_used": "6%",
+        "kb_used": "1717824",
+        "kb_available": "36349776",
+        "percent_used": "5%",
         "mount": "/",
         "total_inodes": "2559088",
-        "inodes_used": "83647",
-        "inodes_available": "2475441",
+        "inodes_used": "83600",
+        "inodes_available": "2475488",
         "inodes_percent_used": "4%",
         "fs_type": "ext4",
         "mount_options": [
           "rw",
           "errors=remount-ro"
-        ]
+        ],
+        "uuid": "5d6a16a5-7951-409a-913c-7f2367b71305"
       },
       "none": {
         "kb_size": "102400",
@@ -483,13 +484,14 @@
         "fs_type": "ext2",
         "mount_options": [
           "rw"
-        ]
+        ],
+        "uuid": "fd581de3-dcf0-42fb-87f3-55dcb53c1469"
       },
       "vagrant": {
         "kb_size": "385984508",
-        "kb_used": "59407776",
-        "kb_available": "326576732",
-        "percent_used": "16%",
+        "kb_used": "62084996",
+        "kb_available": "323899512",
+        "percent_used": "17%",
         "mount": "/vagrant",
         "total_inodes": "1000",
         "inodes_used": "0",
@@ -551,6 +553,14 @@
           "none",
           "name=systemd"
         ]
+      },
+      "/dev/sda5": {
+        "fs_type": "LVM2_member",
+        "uuid": "af2MWZ-yES5-O62E-fWIv-LeIZ-587L-IKUonY"
+      },
+      "/dev/mapper/vagrant--vg-swap_1": {
+        "fs_type": "swap",
+        "uuid": "2581b922-ef05-47f5-99d5-00be1bdbf887"
       }
     },
     "cpu": {
@@ -617,30 +627,30 @@
     },
     "memory": {
       "swap": {
-        "cached": "60kB",
+        "cached": "0kB",
         "total": "786428kB",
-        "free": "785020kB"
+        "free": "786428kB"
       },
       "total": "371948kB",
-      "free": "33132kB",
-      "buffers": "45640kB",
-      "cached": "67784kB",
-      "active": "165668kB",
-      "inactive": "68008kB",
-      "dirty": "20kB",
+      "free": "75888kB",
+      "buffers": "26476kB",
+      "cached": "119444kB",
+      "active": "166576kB",
+      "inactive": "93252kB",
+      "dirty": "32kB",
       "writeback": "0kB",
-      "anon_pages": "120228kB",
-      "mapped": "11944kB",
-      "slab": "91768kB",
-      "slab_reclaimable": "81216kB",
-      "slab_unreclaim": "10552kB",
-      "page_tables": "3672kB",
+      "anon_pages": "113932kB",
+      "mapped": "18412kB",
+      "slab": "24244kB",
+      "slab_reclaimable": "16156kB",
+      "slab_unreclaim": "8088kB",
+      "page_tables": "2836kB",
       "nfs_unstable": "0kB",
       "bounce": "0kB",
       "commit_limit": "972400kB",
-      "committed_as": "234712kB",
+      "committed_as": "221876kB",
       "vmalloc_total": "34359738367kB",
-      "vmalloc_used": "17372kB",
+      "vmalloc_used": "17340kB",
       "vmalloc_chunk": "34359717368kB"
     },
     "filesystem2": {
@@ -665,12 +675,12 @@
         },
         "tmpfs": {
           "kb_size": "37196",
-          "kb_used": "408",
-          "kb_available": "36788",
+          "kb_used": "404",
+          "kb_available": "36792",
           "percent_used": "2%",
           "total_inodes": "46493",
-          "inodes_used": "364",
-          "inodes_available": "46129",
+          "inodes_used": "362",
+          "inodes_available": "46131",
           "inodes_percent_used": "1%",
           "fs_type": "tmpfs",
           "mount_options": [
@@ -686,18 +696,19 @@
         },
         "/dev/mapper/vagrant--vg-root": {
           "kb_size": "40129116",
-          "kb_used": "1912152",
-          "kb_available": "36155448",
-          "percent_used": "6%",
+          "kb_used": "1717824",
+          "kb_available": "36349776",
+          "percent_used": "5%",
           "total_inodes": "2559088",
-          "inodes_used": "83647",
-          "inodes_available": "2475441",
+          "inodes_used": "83600",
+          "inodes_available": "2475488",
           "inodes_percent_used": "4%",
           "fs_type": "ext4",
           "mount_options": [
             "rw",
             "errors=remount-ro"
           ],
+          "uuid": "5d6a16a5-7951-409a-913c-7f2367b71305",
           "mounts": [
             "/"
           ]
@@ -739,15 +750,16 @@
           "mount_options": [
             "rw"
           ],
+          "uuid": "fd581de3-dcf0-42fb-87f3-55dcb53c1469",
           "mounts": [
             "/boot"
           ]
         },
         "vagrant": {
           "kb_size": "385984508",
-          "kb_used": "59407776",
-          "kb_available": "326576732",
-          "percent_used": "16%",
+          "kb_used": "62084996",
+          "kb_available": "323899512",
+          "percent_used": "17%",
           "total_inodes": "1000",
           "inodes_used": "0",
           "inodes_available": "1000",
@@ -833,11 +845,15 @@
           ]
         },
         "/dev/sda5": {
+          "fs_type": "LVM2_member",
+          "uuid": "af2MWZ-yES5-O62E-fWIv-LeIZ-587L-IKUonY",
           "mounts": [
 
           ]
         },
         "/dev/mapper/vagrant--vg-swap_1": {
+          "fs_type": "swap",
+          "uuid": "2581b922-ef05-47f5-99d5-00be1bdbf887",
           "mounts": [
 
           ]
@@ -864,12 +880,12 @@
         },
         "/run": {
           "kb_size": "37196",
-          "kb_used": "408",
-          "kb_available": "36788",
+          "kb_used": "404",
+          "kb_available": "36792",
           "percent_used": "2%",
           "total_inodes": "46493",
-          "inodes_used": "364",
-          "inodes_available": "46129",
+          "inodes_used": "362",
+          "inodes_available": "46131",
           "inodes_percent_used": "1%",
           "fs_type": "tmpfs",
           "mount_options": [
@@ -885,18 +901,19 @@
         },
         "/": {
           "kb_size": "40129116",
-          "kb_used": "1912152",
-          "kb_available": "36155448",
-          "percent_used": "6%",
+          "kb_used": "1717824",
+          "kb_available": "36349776",
+          "percent_used": "5%",
           "total_inodes": "2559088",
-          "inodes_used": "83647",
-          "inodes_available": "2475441",
+          "inodes_used": "83600",
+          "inodes_available": "2475488",
           "inodes_percent_used": "4%",
           "fs_type": "ext4",
           "mount_options": [
             "rw",
             "errors=remount-ro"
           ],
+          "uuid": "5d6a16a5-7951-409a-913c-7f2367b71305",
           "devices": [
             "/dev/mapper/vagrant--vg-root"
           ]
@@ -993,15 +1010,16 @@
           "mount_options": [
             "rw"
           ],
+          "uuid": "fd581de3-dcf0-42fb-87f3-55dcb53c1469",
           "devices": [
             "/dev/sda1"
           ]
         },
         "/vagrant": {
           "kb_size": "385984508",
-          "kb_used": "59407776",
-          "kb_available": "326576732",
-          "percent_used": "16%",
+          "kb_used": "62084996",
+          "kb_available": "323899512",
+          "percent_used": "17%",
           "total_inodes": "1000",
           "inodes_used": "0",
           "inodes_available": "1000",
@@ -1134,13 +1152,13 @@
         "tmpfs,/run": {
           "device": "tmpfs",
           "kb_size": "37196",
-          "kb_used": "408",
-          "kb_available": "36788",
+          "kb_used": "404",
+          "kb_available": "36792",
           "percent_used": "2%",
           "mount": "/run",
           "total_inodes": "46493",
-          "inodes_used": "364",
-          "inodes_available": "46129",
+          "inodes_used": "362",
+          "inodes_available": "46131",
           "inodes_percent_used": "1%",
           "fs_type": "tmpfs",
           "mount_options": [
@@ -1154,19 +1172,20 @@
         "/dev/mapper/vagrant--vg-root,/": {
           "device": "/dev/mapper/vagrant--vg-root",
           "kb_size": "40129116",
-          "kb_used": "1912152",
-          "kb_available": "36155448",
-          "percent_used": "6%",
+          "kb_used": "1717824",
+          "kb_available": "36349776",
+          "percent_used": "5%",
           "mount": "/",
           "total_inodes": "2559088",
-          "inodes_used": "83647",
-          "inodes_available": "2475441",
+          "inodes_used": "83600",
+          "inodes_available": "2475488",
           "inodes_percent_used": "4%",
           "fs_type": "ext4",
           "mount_options": [
             "rw",
             "errors=remount-ro"
-          ]
+          ],
+          "uuid": "5d6a16a5-7951-409a-913c-7f2367b71305"
         },
         "none,/sys/fs/cgroup": {
           "device": "none",
@@ -1257,14 +1276,15 @@
           "fs_type": "ext2",
           "mount_options": [
             "rw"
-          ]
+          ],
+          "uuid": "fd581de3-dcf0-42fb-87f3-55dcb53c1469"
         },
         "vagrant,/vagrant": {
           "device": "vagrant",
           "kb_size": "385984508",
-          "kb_used": "59407776",
-          "kb_available": "326576732",
-          "percent_used": "16%",
+          "kb_used": "62084996",
+          "kb_available": "323899512",
+          "percent_used": "17%",
           "mount": "/vagrant",
           "total_inodes": "1000",
           "inodes_used": "0",
@@ -1371,10 +1391,14 @@
           "device": "/dev/sda2"
         },
         "/dev/sda5,": {
-          "device": "/dev/sda5"
+          "device": "/dev/sda5",
+          "fs_type": "LVM2_member",
+          "uuid": "af2MWZ-yES5-O62E-fWIv-LeIZ-587L-IKUonY"
         },
         "/dev/mapper/vagrant--vg-swap_1,": {
-          "device": "/dev/mapper/vagrant--vg-swap_1"
+          "device": "/dev/mapper/vagrant--vg-swap_1",
+          "fs_type": "swap",
+          "uuid": "2581b922-ef05-47f5-99d5-00be1bdbf887"
         }
       }
     },
@@ -2020,16 +2044,149 @@
         }
       }
     },
-    "current_user": "vagrant",
+    "current_user": "root",
     "dmi": {
-      "dmidecode_version": "2.12"
+      "dmidecode_version": "2.12",
+      "smbios_version": "2.5",
+      "structures": {
+        "count": "10",
+        "size": "450"
+      },
+      "table_location": "0x000E1000",
+      "bios": {
+        "all_records": [
+          {
+            "record_id": "0x0000",
+            "size": "0",
+            "application_identifier": "BIOS Information",
+            "Vendor": "innotek GmbH",
+            "Version": "VirtualBox",
+            "Release Date": "12/01/2006",
+            "Address": "0xE0000",
+            "Runtime Size": "128 kB",
+            "ROM Size": "128 kB",
+            "Characteristics": {
+              "ISA is supported": null,
+              "PCI is supported": null,
+              "Boot from CD is supported": null,
+              "Selectable boot is supported": null,
+              "8042 keyboard services are supported (int 9h)": null,
+              "CGA/mono video services are supported (int 10h)": null,
+              "ACPI is supported": null
+            }
+          }
+        ],
+        "vendor": "innotek GmbH",
+        "version": "VirtualBox",
+        "release_date": "12/01/2006",
+        "address": "0xE0000",
+        "runtime_size": "128 kB",
+        "rom_size": "128 kB"
+      },
+      "system": {
+        "all_records": [
+          {
+            "record_id": "0x0001",
+            "size": "1",
+            "application_identifier": "System Information",
+            "Manufacturer": "innotek GmbH",
+            "Product Name": "VirtualBox",
+            "Version": "1.2",
+            "Serial Number": "0",
+            "UUID": "55E5EED8-A751-4578-8ACB-4E0EBFEA8102",
+            "Wake-up Type": "Power Switch",
+            "SKU Number": "Not Specified",
+            "Family": "Virtual Machine"
+          }
+        ],
+        "manufacturer": "innotek GmbH",
+        "product_name": "VirtualBox",
+        "version": "1.2",
+        "serial_number": "0",
+        "uuid": "55E5EED8-A751-4578-8ACB-4E0EBFEA8102",
+        "wake_up_type": "Power Switch",
+        "sku_number": "Not Specified",
+        "family": "Virtual Machine"
+      },
+      "base_board": {
+        "all_records": [
+          {
+            "record_id": "0x0008",
+            "size": "2",
+            "application_identifier": "Base Board Information",
+            "Manufacturer": "Oracle Corporation",
+            "Product Name": "VirtualBox",
+            "Version": "1.2",
+            "Serial Number": "0",
+            "Asset Tag": "Not Specified",
+            "Features": {
+              "Board is a hosting board": null
+            },
+            "Location In Chassis": "Not Specified",
+            "Chassis Handle": "0x0003",
+            "Type": "Motherboard",
+            "Contained Object Handles": "0"
+          }
+        ],
+        "manufacturer": "Oracle Corporation",
+        "product_name": "VirtualBox",
+        "version": "1.2",
+        "serial_number": "0",
+        "asset_tag": "Not Specified",
+        "location_in_chassis": "Not Specified",
+        "chassis_handle": "0x0003",
+        "type": "Motherboard",
+        "contained_object_handles": "0"
+      },
+      "chassis": {
+        "all_records": [
+          {
+            "record_id": "0x0003",
+            "size": "3",
+            "application_identifier": "Chassis Information",
+            "Manufacturer": "Oracle Corporation",
+            "Type": "Other",
+            "Lock": "Not Present",
+            "Version": "Not Specified",
+            "Serial Number": "Not Specified",
+            "Asset Tag": "Not Specified",
+            "Boot-up State": "Safe",
+            "Power Supply State": "Safe",
+            "Thermal State": "Safe",
+            "Security Status": "None"
+          }
+        ],
+        "manufacturer": "Oracle Corporation",
+        "type": "Other",
+        "lock": "Not Present",
+        "version": "Not Specified",
+        "serial_number": "Not Specified",
+        "asset_tag": "Not Specified",
+        "boot_up_state": "Safe",
+        "power_supply_state": "Safe",
+        "thermal_state": "Safe",
+        "security_status": "None"
+      },
+      "oem_strings": {
+        "all_records": [
+          {
+            "record_id": "0x0002",
+            "size": "11",
+            "application_identifier": "OEM Strings",
+            "String 1": "vboxVer_5.0.14",
+            "String 2": "vboxRev_105127"
+          }
+        ],
+        "string_1": "vboxVer_5.0.14",
+        "string_2": "vboxRev_105127"
+      }
     },
     "hostname": "vagrant",
     "machinename": "vagrant",
     "fqdn": "vagrant.vm",
     "domain": "vm",
     "cloud_v2": null,
-    "ohai_time": 1455056576.8266356,
+    "ohai_time": 1455089741.1575284,
     "recipes": [
 
     ],

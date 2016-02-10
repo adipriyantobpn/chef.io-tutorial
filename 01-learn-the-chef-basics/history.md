@@ -122,6 +122,21 @@ Contents
         ```
 
 ##Configure a package and service
+
+1. Install the Apache package
+    - Create chef recipe file
+        ```
+        $ nano webserver.rb
+        ```
+    - Insert these lines
+        ```
+        package 'apache2'
+        ```
+    - Execute the recipe
+        ```
+        $ sudo chef-client --local-mode webserver.rb
+        ```
+
 ##Make your recipe more manageable
 ##Appendix: Set up your own server
 
