@@ -178,6 +178,7 @@ Contents
     ```
     $ curl localhost
     ```
+    review : [execute.log][package-service-log]
 
 ##Make your recipe more manageable
 
@@ -295,6 +296,8 @@ Contents
 [motd-modify]:          resource-log/01-configure-a-resource/03-modify-motd-file/execution.log
 [motd-accident-modif]:  resource-log/01-configure-a-resource/04-simulate-accidental-file-modification/execution.log
 [motd-delete]:          resource-log/01-configure-a-resource/05-delete-motd-file/execution.log
+
+[package-service-log]:  resource-log/02-configure-a-package-and-service/execution.log
 
 [img-chef-cookbook-dir-structure]:          resource-log/03-make-your-recipe-more-manageable/chef-cookbook-directory-structure.png
 [img-chef-cookbook-template-dir-structure]: resource-log/03-make-your-recipe-more-manageable/chef-cookbook-template-dir-structure.png
