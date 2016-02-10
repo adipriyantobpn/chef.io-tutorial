@@ -39,9 +39,9 @@ Contents
     $ # sudo chmod +x install.sh
     $ # sudo ./install.sh -c stable -P chefdk -v 0.10
     ```
-    download : [install.sh](resource-log/01-install-chefdk/install.sh)
-    review : [install.log](resource-log/01-install-chefdk/install.log)
-    literature : [bash options](resource-log/01-install-chefdk/advanced-bash-scripting-guide_options.html)
+    download : [install.sh][install-chefdk]
+    review : [install.log][install-chefdk-log]
+    literature : [bash options][bash-options]
 
 3. Set up your working directory
     ```
@@ -230,3 +230,6 @@ Contents
 [emacs]: http://www.jesshamrick.com/2012/09/10/absolute-beginners-guide-to-emacs/
 [nano]: http://www.howtogeek.com/howto/42980/the-beginners-guide-to-nano-the-linux-command-line-text-editor/
 [vim]: http://www.openvim.com/
+[install-chefdk]: resource-log/01-configure-a-resource/01-install-chefdk/install.sh
+[install-chefdk-log]: resource-log/01-configure-a-resource/01-install-chefdk/install.log
+[bash-options]: resource-log/01-configure-a-resource/01-install-chefdk/advanced-bash-scripting-guide_options.html
