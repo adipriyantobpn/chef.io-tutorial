@@ -208,6 +208,30 @@ Contents
           </body>
         </html>
         ```
+3. Update the recipe to reference the HTML template
+    - Modify default recipe file
+        ```
+        $ nano learn_chef_apache2/recipes/default.rb
+        ```
+    - Add these lines to the recipe
+        ```
+        package 'apache2'
+        #
+        service 'apache2' do
+          supports :status => true
+          action [:enable, :start]
+        end
+        #
+        template '/var/www/html/index.html' do
+          source 'index.html.erb'
+        end
+        ```
+4. Run the cookbook & verify web server
+    ```
+    $ sudo chef-client --local-mode --runlist 'recipe[learn_chef_apache2]'
+    $ curl localhost
+    ```
+    review : [execute.log][cookbook-log]
 
 ##Appendix: Set up your own server
 
@@ -274,3 +298,5 @@ Contents
 
 [img-chef-cookbook-dir-structure]:          resource-log/03-make-your-recipe-more-manageable/chef-cookbook-directory-structure.png
 [img-chef-cookbook-template-dir-structure]: resource-log/03-make-your-recipe-more-manageable/chef-cookbook-template-dir-structure.png
+
+[cookbook-log]: resource-log/03-make-your-recipe-more-manageable/execution.log

@@ -142,3 +142,45 @@ vagrant@vagrant:~/chef-repo/cookbooks$ # ---------------------------------------
 vagrant@vagrant:~/chef-repo/cookbooks$ # -- Modify HTML template file
 vagrant@vagrant:~/chef-repo/cookbooks$ # --------------------------------------------------------------------
 vagrant@vagrant:~/chef-repo/cookbooks$ nano learn_chef_apache2/templates/default/index.html.erb
+vagrant@vagrant:~/chef-repo/cookbooks$
+vagrant@vagrant:~/chef-repo/cookbooks$
+vagrant@vagrant:~/chef-repo/cookbooks$ # --------------------------------------------------------------------
+vagrant@vagrant:~/chef-repo/cookbooks$ # -- Update the recipe to reference the HTML template
+vagrant@vagrant:~/chef-repo/cookbooks$ # --------------------------------------------------------------------
+vagrant@vagrant:~/chef-repo/cookbooks$ nano learn_chef_apache2/recipes/default.rb
+vagrant@vagrant:~/chef-repo/cookbooks$
+vagrant@vagrant:~/chef-repo/cookbooks$
+vagrant@vagrant:~/chef-repo/cookbooks$ # --------------------------------------------------------------------
+vagrant@vagrant:~/chef-repo/cookbooks$ # -- Run the cookbook
+vagrant@vagrant:~/chef-repo/cookbooks$ # --------------------------------------------------------------------
+vagrant@vagrant:~/chef-repo/cookbooks$ sudo chef-client --local-mode --runlist 'recipe[learn_chef_apache2]'
+[2016-02-10T09:44:58+00:00] WARN: No config file found or specified on command line, using command line options.
+Starting Chef Client, version 12.5.1
+resolving cookbooks for run list: ["learn_chef_apache2"]
+Synchronizing Cookbooks:
+  - learn_chef_apache2 (0.1.0)
+Compiling Cookbooks...
+Converging 3 resources
+Recipe: learn_chef_apache2::default
+  * apt_package[apache2] action install (up to date)
+  * service[apache2] action enable (up to date)
+  * service[apache2] action start (up to date)
+  * template[/var/www/html/index.html] action create
+    - update content in file /var/www/html/index.html from 2914aa to ef4ffd
+    (no diff)
+
+Running handlers:
+Running handlers complete
+Chef Client finished, 1/4 resources updated in 02 seconds
+vagrant@vagrant:~/chef-repo/cookbooks$
+vagrant@vagrant:~/chef-repo/cookbooks$
+vagrant@vagrant:~/chef-repo/cookbooks$ # --------------------------------------------------------------------
+vagrant@vagrant:~/chef-repo/cookbooks$ # -- Run the cookbook
+vagrant@vagrant:~/chef-repo/cookbooks$ # --------------------------------------------------------------------
+vagrant@vagrant:~/chef-repo/cookbooks$ curl localhost
+<html>
+  <body>
+    <h1>hello world</h1>
+  </body>
+</html>
+vagrant@vagrant:~/chef-repo/cookbooks$
