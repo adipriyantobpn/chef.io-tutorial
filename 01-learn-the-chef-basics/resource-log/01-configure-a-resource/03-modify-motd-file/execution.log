@@ -1,0 +1,25 @@
+vagrant@vagrant:~/chef-repo$ # --------------------------------------------------------------------
+vagrant@vagrant:~/chef-repo$ # -- Modify the recipe using local mode `chef-client`
+vagrant@vagrant:~/chef-repo$ # --------------------------------------------------------------------
+vagrant@vagrant:~/chef-repo$ chef-client --local-mode hello.rb
+[2016-02-09T21:55:43+00:00] WARN: No config file found or specified on command line, using command line options.
+[2016-02-09T21:55:43+00:00] WARN: No cookbooks directory found at or above current directory.  Assuming /home/vagrant/chef-repo.
+Starting Chef Client, version 12.5.1
+resolving cookbooks for run list: []
+Synchronizing Cookbooks:
+Compiling Cookbooks...
+[2016-02-09T21:55:45+00:00] WARN: Node vagrant.vm has an empty run list.
+Converging 1 resources
+Recipe: @recipe_files::/home/vagrant/chef-repo/hello.rb
+  * file[/tmp/motd] action create
+    - update content in file /tmp/motd from b94d27 to c38c60
+    --- /tmp/motd       2016-02-09 21:07:46.307818031 +0000
+    +++ /tmp/.motd20160209-2884-is1i98  2016-02-09 21:55:45.067818031 +0000
+    @@ -1,2 +1,2 @@
+    -hello world
+    +hello chef
+
+Running handlers:
+Running handlers complete
+Chef Client finished, 1/1 resources updated in 01 seconds
+vagrant@vagrant:~/chef-repo$
