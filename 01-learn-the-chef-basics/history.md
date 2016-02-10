@@ -229,13 +229,16 @@ Contents
 [4]: #configure-a-package-and-service
 [5]: #make-your-recipe-more-manageable
 [6]: #appendix-set-up-your-own-server
-[emacs]: http://www.jesshamrick.com/2012/09/10/absolute-beginners-guide-to-emacs/
-[nano]: http://www.howtogeek.com/howto/42980/the-beginners-guide-to-nano-the-linux-command-line-text-editor/
-[vim]: http://www.openvim.com/
-[install-chefdk]: resource-log/01-configure-a-resource/01-install-chefdk/install.sh
-[install-chefdk-log]: resource-log/01-configure-a-resource/01-install-chefdk/install.log
-[bash-options]: resource-log/01-configure-a-resource/01-install-chefdk/advanced-bash-scripting-guide_options.html
-[motd-create]: resource-log/01-configure-a-resource/02-create-motd-file/execution.log
-[motd-modify]: resource-log/01-configure-a-resource/03-modify-motd-file/execution.log
-[motd-accident-modif]: resource-log/01-configure-a-resource/04-simulate-accidental-file-modification/execution.log
-[motd-delete]: resource-log/01-configure-a-resource/05-delete-motd-file/execution.log
+
+[emacs]:    http://www.jesshamrick.com/2012/09/10/absolute-beginners-guide-to-emacs/
+[nano]:     http://www.howtogeek.com/howto/42980/the-beginners-guide-to-nano-the-linux-command-line-text-editor/
+[vim]:      http://www.openvim.com/
+
+[install-chefdk]:       resource-log/01-configure-a-resource/01-install-chefdk/install.sh
+[install-chefdk-log]:   resource-log/01-configure-a-resource/01-install-chefdk/install.log
+[bash-options]:         resource-log/01-configure-a-resource/01-install-chefdk/advanced-bash-scripting-guide_options.html
+
+[motd-create]:          resource-log/01-configure-a-resource/02-create-motd-file/execution.log
+[motd-modify]:          resource-log/01-configure-a-resource/03-modify-motd-file/execution.log
+[motd-accident-modif]:  resource-log/01-configure-a-resource/04-simulate-accidental-file-modification/execution.log
+[motd-delete]:          resource-log/01-configure-a-resource/05-delete-motd-file/execution.log
